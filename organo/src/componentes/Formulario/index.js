@@ -15,14 +15,19 @@ const Formulario = () => {
     "Inovação e Gestão",
   ];
 
+  const aoSalvar = (evento) =>{
+    evento.preventDefault()
+    console.log('Form entrou')
+  }
+
   return (
     <section className="formulario">
-      <form>
+      <form onSubmit={aoSalvar}>
         <h2>Prencha os dados para criar o card do coloborador</h2>
-        <CaompoTexto label="Nome" placeholder="Digite o seu nome" />
-        <CaompoTexto label="Cargo" placeholder="Digite o seu cargo" />
+        <CaompoTexto obrigatorio={true} label="Nome" placeholder="Digite o seu nome" />
+        <CaompoTexto obrigatorio={true} label="Cargo" placeholder="Digite o seu cargo" />
         <CaompoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
-        <ListaSuspensa label="Time" itens={times} />
+        <ListaSuspensa obrigatorio={true} label="Time" itens={times} />
 
         <Botao>Criar Card</Botao>
       </form>

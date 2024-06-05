@@ -9,7 +9,7 @@ const CaompoTexto = (props) =>{
             <label>
                 {props.label}
             </label>
-            <input placeholder={placeholderModificada}/>
+            <input required={props.obrigatorio} placeholder={placeholderModificada}/>
         </div>
     )
 }

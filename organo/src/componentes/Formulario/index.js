@@ -4,7 +4,7 @@ import CaompoTexto from "../CompoTexto";
 import ListaSuspensa from "../ListaSuspensa";
 import "./Formulario.css";
 
-const Formulario = () => {
+const Formulario = (props) => {
   // aqui pode ser todos os departamentos que vai ter o filtro para trazer para os departamentos
   const times = [
     "Programação",
@@ -22,9 +22,14 @@ const Formulario = () => {
   const [time, setTime] = useState("");
 
   const aoSalvar = (evento) => {
-    evento.preventDefault();
-    console.log("Form entrou", nome, cargo, imagem, time);
-  };
+    evento.preventDefault()
+    props.aoColaboradorCadastrado ({
+        nome,
+        cargo,
+        imagem,
+        time
+    })
+}
 
   return (
     <section className="formulario">

@@ -6,6 +6,11 @@ import Time from "./componentes/Time";
 function App() {
   const times = [
     {
+      nome: "",
+      corPrimaria: "",
+      corSecundaria: "",
+    },
+    {
       nome: "Programação",
       corPrimaria: "#57C278",
       corSecundaria: "#D9F7E9",
@@ -45,7 +50,7 @@ function App() {
   const [colaboradores, setColaboradores] = useState([]);
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador);
+    //console.log(colaborador);
     setColaboradores([...colaboradores, colaborador]);
   };
 

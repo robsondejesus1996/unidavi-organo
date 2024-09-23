@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Abordagens de Desenvolvimento no Projeto Organo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Estrutura do Projeto
 
-## Available Scripts
+O projeto Organo é estruturado em uma aplicação React com componentes funcionais e hooks, que permite uma gestão de estado eficiente e dinâmica de componentes reutilizáveis. A estrutura de pastas separa claramente `componentes`, `imagens` e configurações de estilo, promovendo uma organização que facilita a manutenção e escalabilidade do código.
 
-In the project directory, you can run:
+## Componentização
 
-### `npm start`
+Cada parte do aplicativo é dividida em componentes menores, responsáveis por uma funcionalidade específica:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Banner e Rodapé**: Componentes que representam o cabeçalho e o rodapé da aplicação.
+- **Formulário**: Permite a entrada de dados para criação de novos colaboradores e times, utilizando controle de estado local para gerenciar os inputs.
+- **Lista Suspensa e Campo de Texto**: Abstrações para os elementos de formulário, aumentando a reutilização de código.
+- **Botão**: Encapsula um botão estilizado que pode ser reutilizado em diferentes partes da aplicação.
+- **Time**: Agrupa visualmente colaboradores por time e permite interações específicas como mudança de cor e exclusão de colaboradores.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Gerenciamento de Estado
 
-### `npm test`
+O uso de **useState** para controle de estados locais e **props** para passagem de dados entre componentes é uma prática central:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Colaboradores e Times**: Os estados são inicializados e manipulados no componente principal `App`, permitindo que alterações no estado reflitam em toda a aplicação de maneira reativa.
 
-### `npm run build`
+## Funções de Manipulação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Funções específicas para operações como adicionar, remover, e alterar favoritos de colaboradores são definidas no componente `App` e passadas como props aos componentes filhos. Isso demonstra uma abordagem de fluxo de dados unidirecional e encapsulamento de lógica de negócio.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Estilização
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A estilização é feita utilizando CSS modularizado, onde cada componente possui seu próprio arquivo CSS, o que evita conflitos de estilos e melhora a coesão do código.
 
-### `npm run eject`
+## Reutilização e Modularidade
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+A arquitetura do projeto favorece a reutilização de componentes e a modularidade, características valorizadas em aplicações React modernas para facilitar a manutenção e a expansão futuras do código.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto é um exemplo prático de como os conceitos de componentização, gerenciamento de estado e arquitetura modular podem ser implementados em React para criar aplicações eficientes e escaláveis.

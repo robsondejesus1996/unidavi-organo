@@ -1,37 +1,37 @@
-# Abordagens de Desenvolvimento no Projeto Organo
+# Development Approaches in the Organo Project
 
-## Estrutura do Projeto
+## Project Structure
 
-O projeto Organo é estruturado em uma aplicação React com componentes funcionais e hooks, que permite uma gestão de estado eficiente e dinâmica de componentes reutilizáveis. A estrutura de pastas separa claramente `componentes`, `imagens` e configurações de estilo, promovendo uma organização que facilita a manutenção e escalabilidade do código.
+The Organo project is structured as a React application with functional components and hooks, allowing for efficient and dynamic state management and reusable component design. The folder structure clearly separates `components`, `images`, and style settings, promoting an organization that facilitates code maintenance and scalability.
 
-## Componentização
+## Componentization
 
-Cada parte do aplicativo é dividida em componentes menores, responsáveis por uma funcionalidade específica:
+Each part of the application is divided into smaller components, each responsible for specific functionality:
 
-- **Banner e Rodapé**: Componentes que representam o cabeçalho e o rodapé da aplicação.
-- **Formulário**: Permite a entrada de dados para criação de novos colaboradores e times, utilizando controle de estado local para gerenciar os inputs.
-- **Lista Suspensa e Campo de Texto**: Abstrações para os elementos de formulário, aumentando a reutilização de código.
-- **Botão**: Encapsula um botão estilizado que pode ser reutilizado em diferentes partes da aplicação.
-- **Time**: Agrupa visualmente colaboradores por time e permite interações específicas como mudança de cor e exclusão de colaboradores.
+- **Banner and Footer**: Components that represent the header and footer of the application.
+- **Form**: Allows data entry for creating new collaborators and teams, using local state control to manage inputs.
+- **Dropdown List and Text Field**: Abstractions for form elements, increasing code reuse.
+- **Button**: Encapsulates a styled button that can be reused in different parts of the application.
+- **Team**: Visually groups collaborators by team and allows specific interactions such as color change and deletion of collaborators.
 
-## Gerenciamento de Estado
+## State Management
 
-O uso de **useState** para controle de estados locais e **props** para passagem de dados entre componentes é uma prática central:
+The use of **useState** for local state control and **props** for data passing between components is a central practice:
 
-- **Colaboradores e Times**: Os estados são inicializados e manipulados no componente principal `App`, permitindo que alterações no estado reflitam em toda a aplicação de maneira reativa.
+- **Collaborators and Teams**: States are initialized and manipulated in the `App` main component, allowing state changes to reflect throughout the application reactively.
 
-## Funções de Manipulação
+## Handling Functions
 
-Funções específicas para operações como adicionar, remover, e alterar favoritos de colaboradores são definidas no componente `App` e passadas como props aos componentes filhos. Isso demonstra uma abordagem de fluxo de dados unidirecional e encapsulamento de lógica de negócio.
+Specific functions for operations such as adding, removing, and toggling favorites for collaborators are defined in the `App` component and passed as props to child components. This demonstrates a unidirectional data flow approach and business logic encapsulation.
 
-## Estilização
+## Styling
 
-A estilização é feita utilizando CSS modularizado, onde cada componente possui seu próprio arquivo CSS, o que evita conflitos de estilos e melhora a coesão do código.
+Styling is done using modularized CSS, where each component has its own CSS file, which prevents style conflicts and improves code cohesion.
 
-## Reutilização e Modularidade
+## Reusability and Modularity
 
-A arquitetura do projeto favorece a reutilização de componentes e a modularidade, características valorizadas em aplicações React modernas para facilitar a manutenção e a expansão futuras do código.
+The project's architecture favors component reusability and modularity, valued characteristics in modern React applications to facilitate code maintenance and future expansion.
 
 ---
 
-Este projeto é um exemplo prático de como os conceitos de componentização, gerenciamento de estado e arquitetura modular podem ser implementados em React para criar aplicações eficientes e escaláveis.
+This project is a practical example of how the concepts of componentization, state management, and modular architecture can be implemented in React to create efficient and scalable applications.

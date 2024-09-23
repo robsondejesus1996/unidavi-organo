@@ -32,6 +32,14 @@ Styling is done using modularized CSS, where each component has its own CSS file
 
 The project's architecture favors component reusability and modularity, valued characteristics in modern React applications to facilitate code maintenance and future expansion.
 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/6050cd4b-cb25-46b7-ac31-cc8d428c4005" alt="Image Project 1">
+</p>
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/2e69b317-fcee-49ff-bfd3-2e706117a1dc" alt="Image Project 2">
+</p>
+
 ---
 
 This project is a practical example of how the concepts of componentization, state management, and modular architecture can be implemented in React to create efficient and scalable applications.
